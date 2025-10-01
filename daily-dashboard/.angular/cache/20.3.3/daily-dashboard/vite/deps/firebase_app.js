@@ -21,7 +21,7 @@ import {
   onLog,
   registerVersion,
   setLogLevel
-} from "./chunk-WK55WA6B.js";
+} from "./chunk-VX244LGP.js";
 import "./chunk-GOMI4DH3.js";
 export {
   FirebaseError,
