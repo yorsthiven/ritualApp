@@ -1,0 +1,13 @@
+<h2>Mis hábitos diarios</h2>
+
+<input [(ngModel)]="newHabit" placeholder="Nuevo hábito" />
+<button (click)="addHabit()">Agregar hábito</button>
+
+<ul>
+  <li *ngFor="let habit of habits; let i = index">
+    <label>
+      <input type="checkbox" [checked]="habit.completedToday" (change)="toggleHabit(habit)" />
+      {{ habit.name }}
+    </label>
+  </li>
+</ul>
