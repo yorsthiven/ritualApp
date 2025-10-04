@@ -7,22 +7,25 @@ import { Habit } from '../../models/habit';
 export class HabitService {
   constructor(private firestore: Firestore) {}
 
+  //agregar un habito
   addHabit(habit: Habit) {
     const habitRef = collection(this.firestore, 'habits');
     return addDoc(habitRef, habit);
   }
 
+  //obtener los habitos actuales
   getHabits(): Observable<Habit[]> {
     const habitRef = collection(this.firestore, 'habits');
     return collectionData(habitRef, { idField: 'id' }) as Observable<Habit[]>;
   }
 
-  updateHabitStatus(habitId: string, completed: boolean) {
+  //modificar el check del habito
+  updateHabitStatus(habitId: string, estado: boolean) {
     const habitDocRef = doc(this.firestore, `habits/${habitId}`);
     const today = new Date().toISOString().slice(0, 10);
     return updateDoc(habitDocRef, {
-      completedToday: completed,
-      [`history.${today}`]: completed
+      estado: estado,
+      [`history.${today}`]: estado
     });
   }
 }
