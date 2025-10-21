@@ -5,10 +5,10 @@
   <section class="row">
     <!-- Pagina de usuarios -->
     <div class="col-12 col-sm-6">
-      <agregar-usuario-component (nuevoUsuario)="agregarUsuario($event)"/>
+      <agregar-usuario-component (nuevoUsuario)="usuarioService.agregarUsuario($event)"/>
     </div>
     <div class="col-12 col-sm-6">
-      <listar-usuario-component [usuarios]="usuarios()" titulo="Lista de Usuarios"></listar-usuario-component>
+      <listar-usuario-component [usuarios]="usuarioService.usuarios()" titulo="Lista de Usuarios"></listar-usuario-component>
     </div>
   </section>
 </div>
