@@ -1,0 +1,9 @@
+<h1>{{titulo()}}</h1>
+<ul>
+  @for (usuario of usuarios(); track usuario.nombre) {
+  <li>
+    <span> {{ usuario.nombre }} </span>
+    <strong>({{ usuario.edad }})</strong>
+  </li>
+  }
+</ul>

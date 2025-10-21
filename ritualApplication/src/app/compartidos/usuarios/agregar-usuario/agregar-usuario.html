@@ -1,0 +1,7 @@
+<h2 class="center">Agregar Usuario {{ nombre() }}</h2>
+<input type="text" class="form-control mt-2" placeholder="Nombre" [value]="nombre()" (input)="nombre.set(txtNombre.value)" #txtNombre/>
+
+<h2 class="center">Agregar edad {{ edad() }}</h2>
+<input type="text" class="form-control mt-2" placeholder="Edad" [value]="edad()" (input)="edad.set(+txtEdad.value)" #txtEdad/>
+
+<button class="mt-2 btn btn-primary" (click)="agregarUsuario()">Agregar</button>
