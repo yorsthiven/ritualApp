@@ -1,0 +1,14 @@
+
+<div class="container-fluid">
+  <h1 class="text-center">Usuarios</h1>
+  <hr />
+  <section class="row">
+    <!-- Pagina de usuarios -->
+    <div class="col-12 col-sm-6">
+      <agregar-usuario-component (nuevoUsuario)="agregarUsuario($event)"/>
+    </div>
+    <div class="col-12 col-sm-6">
+      <listar-usuario-component [usuarios]="usuarios()" titulo="Lista de Usuarios"></listar-usuario-component>
+    </div>
+  </section>
+</div>

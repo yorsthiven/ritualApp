@@ -1,0 +1,21 @@
+nav{
+  display: flex;
+  justify-content: space-around;
+  background-color: #212121;
+  color: white;
+  padding: 10px;
+  margin: 20px;
+  border: #eb0404;
+
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+  background-color: #333; /* 👈 fondo oscuro solo del enlace*/
+  padding: 8px 16px;
+}
+
+nav a.active{
+  color: #eb0404;
+}
