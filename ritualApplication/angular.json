@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ritualApplication": {
+    "ritualApp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,10 +56,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ritualApplication:build:production"
+              "buildTarget": "ritualApp:build:production"
             },
             "development": {
-              "buildTarget": "ritualApplication:build:development"
+              "buildTarget": "ritualApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,6 +90,6 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "ba3d5dad-5cef-4a3f-b359-10a56209f808"
   }
 }

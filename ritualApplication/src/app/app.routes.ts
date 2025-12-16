@@ -1,29 +1,35 @@
 import { Routes } from '@angular/router';
-import { UsuariosPageComponent } from './pages/usuarios/usuarios-page';
-import { HabitosPageComponent } from './pages/habitos/habitos-page';
-import { TareasPageComponent } from './pages/tareas/tareas-page';
+import { InicioPageComponent } from './pages/inicio/inicioPageComponent';
 
 export const routes: Routes = [
-
-  // {
-  //   path:'',
-  //   component:CounterPageComponent,
-  // },
   {
-    path:'usuarios',
-    component:UsuariosPageComponent
+    path: 'dashboard',
+    loadComponent: () => import('./dashboard/dashboard'),
+    children: [
+      {
+        path: 'login',
+        loadComponent: () => import('./pages/login-page/login-page.component'),
+      },
+      {
+        path: 'home',
+        loadComponent: () => import('./pages/home-page.component/home-page.component'),
+      },
+      {
+        path: 'olvidoClave',
+        loadComponent: () => import('./pages/olvido-clave-page-component/olvido-clave-page-component'),
+      },
+      {
+        path: 'lateral',
+        loadComponent: () => import('./manuLateral/menu-lateral-component/menu-lateral-component'),
+      },
+      {
+        path: '**',
+        redirectTo: 'login',
+      },
+    ],
   },
   {
-    path:'habitos',
-    component:HabitosPageComponent
+    path: '**',
+    redirectTo: 'dashboard',
   },
-  {
-    path:'tareas',
-    component:TareasPageComponent
-  },
-  {
-    path:'**',
-    redirectTo:''
-  },
-
 ];
